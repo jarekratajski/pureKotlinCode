@@ -29,7 +29,7 @@ fun pureSum(orders: Seq<Order>): Int =
         when (order) {
             is Paid -> accumulator + order.sum
             is Delivered -> accumulator + order.sum
-            is Created -> 0
+            is Created -> accumulator
             else -> TODO()
         }
     }
