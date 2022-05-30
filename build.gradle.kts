@@ -5,7 +5,7 @@ repositories {
 }
 
 plugins {
-    kotlin("jvm") version "1.4.31"
+    kotlin("jvm") version "1.5.21"
     id("io.gitlab.arturbosch.detekt").version("1.16.0")
 }
 

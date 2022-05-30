@@ -11,17 +11,17 @@ class Paid(s: Int) : Order(s)
 
 class Delivered(s: Int) : Order(s)
 
-class Cancelled(s:Int) : Order(s)
-
-class Archived(s:Int) :Order(s)
+//class Cancelled(s:Int) : Order(s)
+//
+//class Archived(s:Int) :Order(s)
 
 val orders = list(
     Created(120),
     Paid(20),
     Delivered(30),
     Paid(40),
-    Cancelled(20),
-    Archived(10)
+//    Cancelled(20),
+//    Archived(10)
 )
 
 fun pureSum(orders: Seq<Order>): Int =
@@ -30,7 +30,6 @@ fun pureSum(orders: Seq<Order>): Int =
             is Paid -> accumulator + order.sum
             is Delivered -> accumulator + order.sum
             is Created -> accumulator
-            else -> TODO()
         }
     }
 

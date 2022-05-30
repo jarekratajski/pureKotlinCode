@@ -33,15 +33,6 @@ class Cancelled internal constructor(order: Order) : Order(order.sum) {
 
 class Archived internal constructor(order: Delivered) : Order(order.sum)
 
-//val orders = list(
-//    Created(120),
-//    Created(20).pay(),
-//    Created(30).pay().deliver(),
-//    Created(40).pay(),
-//    Created(20).pay().cancelled(),
-//    Created(30).pay().deliver().archive()
-//)
-
 fun pureSum(orders: Seq<Order>): Int =
     orders.foldLeft(0) { accumulator, order ->
         accumulator + order.income()
